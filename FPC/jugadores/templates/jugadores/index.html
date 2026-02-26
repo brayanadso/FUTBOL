@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jugadores</title>
+    <link rel="stylesheet" href="{% static 'jugadores/css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <h1 class="app-title"> F  P  C </h1>
+        <div>
+            <a href="/" class="btn btn-equipos">Home</a>
+            <a href="/equipos/" class="btn btn-equipos">Equipos</a>
+           <a href="/jugadores/" class="btn btn-equipos">Jugadores</a>
+        </div>
+    </nav>
+
+    <h2>Jugadores</h2>           
+
+    <div class="jugadores-container">
+        {% for jugador in jugadores %}
+        <div class="jugador-card">
+            {% if jugador.foto %}
+                <img src="{% static 'jugadores/img/' %}{{ jugador.foto }}" alt="{{ jugador.nombre }}">
+            {% endif %}
+            <h3>{{ jugador.nombre }}</h3>
+            <p>📌 {{ jugador.posicion }}</p>
+            <p>⚽ {{ jugador.equipo }}</p>
+            <div class="dorsal">{{ jugador.numero_camiseta }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+```
+
+---
+
+
+

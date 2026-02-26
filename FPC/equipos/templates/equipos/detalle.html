@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ equipo.nombre }}</title>
+    <link rel="stylesheet" href="{% static 'equipos/css/detalle.css' %}">
+</head>
+<body>
+     <nav>
+        <h1>F  P  C</h1>
+        <div>
+            <a href="/" class="btn btn-equipos">Home</a>
+            <a href="/equipos/" class="btn btn-equipos">Equipos</a>
+           <a href="/jugadores/" class="btn btn-equipos">Jugadores</a>
+        </div>
+    </nav>
+
+    <div class="equipo-header">
+        {% if equipo.escudo %}
+            <img src="{% static 'equipos/img/' %}{{ equipo.escudo }}" alt="{{ equipo.nombre }}">
+        {% endif %}
+        <div class="equipo-info">
+            <h1>{{ equipo.nombre }}</h1>
+            <p>🏙️ {{ equipo.ciudad }}</p>
+            <p>👨‍💼 {{ equipo.director_tecnico }}</p>
+            <span>🏆 {{ equipo.trofeos_ganados }} trofeos</span>
+        </div>
+    </div>
+
+    <h2>Jugadores</h2>
+
+    <div class="jugadores-container">
+        {% for jugador in jugadores %}
+        <div class="jugador-card">
+            {% if jugador.foto %}
+                <img src="{% static 'jugadores/img/' %}{{ jugador.foto }}" alt="{{ jugador.nombre }}">
+            {% endif %}
+            <h3>{{ jugador.nombre }}</h3>
+            <p>📌 {{ jugador.posicion }}</p>
+            <div class="dorsal">{{ jugador.numero_camiseta }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
