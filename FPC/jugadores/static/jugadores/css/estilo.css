@@ -133,3 +133,84 @@ h2 {
     color: #0a0a0a;
     box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
 }
+
+.historial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.historial-card {
+    background: #1a3a1a;
+    border: 2px solid #f0c000;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+.historial-card:hover {
+    transform: translateY(-5px);
+}
+.historial-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.sin-escudo {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.historial-card h3 {
+    color: #f0c000;
+    font-size: 1rem;
+    margin: 0 0 8px;
+}
+.historial-card .temporadas {
+    color: #ccc;
+    font-size: 0.85rem;
+    margin: 4px 0;
+}
+.historial-card .goles-badge {
+    background: #f0c000;
+    color: #000;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 4px 14px;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.historial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.historial-card {
+    background: #1a3a1a;
+    border: 2px solid #f0c000;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+.historial-card:hover { transform: translateY(-5px); }
+.historial-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.sin-escudo { font-size: 3rem; margin-bottom: 10px; }
+.historial-card h3 { color: #f0c000; font-size: 1rem; margin: 0 0 8px; }
+.historial-card .temporadas { color: #ccc; font-size: 0.85rem; margin: 4px 0; }
+.historial-card .goles-badge {
+    background: #f0c000;
+    color: #000;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 4px 14px;
+    display: inline-block;
+    margin-top: 8px;
+}

@@ -5,4 +5,5 @@ app_name = 'jugadores'
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('<int:id>/', views.detalle, name='detalle'),  # ← NUEVA
 ]

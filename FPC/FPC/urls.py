@@ -20,6 +20,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from equipos.views import home
+from django.conf.urls.static import static  # ← AGREGAR ESTA LÍNEA
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,3 +28,5 @@ urlpatterns = [
     path('jugadores/', include('jugadores.urls')),
     path('', home),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

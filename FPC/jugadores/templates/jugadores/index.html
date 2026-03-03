@@ -5,7 +5,10 @@
     <title>Jugadores</title>
     <link rel="stylesheet" href="{% static 'jugadores/css/style.css' %}">
 </head>
-<body>
+<style>
+     .btn-info { display: inline-block; margin-top: 20px; background: #f0c000; color: #000; padding: 10px 24px; border-radius: 20px; text-decoration: none; font-weight: bold; }
+</style>
+     <body>
     <nav>
         <h1 class="app-title"> F  P  C </h1>
         <div>
@@ -21,12 +24,13 @@
         {% for jugador in jugadores %}
         <div class="jugador-card">
             {% if jugador.foto %}
-                <img src="{% static 'jugadores/img/' %}{{ jugador.foto }}" alt="{{ jugador.nombre }}">
+                <img src="{{ jugador.foto.url }}" alt="{{ jugador.nombre }}">
             {% endif %}
             <h3>{{ jugador.nombre }}</h3>
             <p>📌 {{ jugador.posicion }}</p>
             <p>⚽ {{ jugador.equipo }}</p>
-            <div class="dorsal">{{ jugador.numero_camiseta }}</div>
+            <div class="dorsal">{{ jugador.numero_camiseta }}</div><br><br>
+            <a href="/jugadores/{{ jugador.id }}/" class="btn-info">Ver perfil</a>
         </div>
         {% endfor %}
     </div>
