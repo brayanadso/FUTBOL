@@ -5,9 +5,9 @@ from .models import Equipo
 def home(request):
     return render(request, 'equipos/home.html')
 
-def index(request):
+def equipo(request):
     equipos = Equipo.objects.all()
-    return render(request, 'equipos/index.html', {'equipos': equipos})
+    return render(request, 'equipos/equipo.html', {'equipos': equipos})
 
 def detalle(request, id):
     equipo = get_object_or_404(Equipo, id=id)

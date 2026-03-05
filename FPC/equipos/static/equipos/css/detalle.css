@@ -73,18 +73,18 @@ h2 {
 }
 
 .jugadores-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 10px;
+    padding: 10px 20px;
     justify-content: center;
-    gap: 25px;
-    padding: 20px 40px 40px;
 }
 
 .jugador-card {
     background: linear-gradient(145deg, #0d1f0d, #1a3a1a);
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 20px;
-    width: 200px;
+    width: 80%;
     text-align: center;
     border: 1px solid #2d5a2d;
     transition: all 0.3s;
@@ -129,7 +129,6 @@ h2 {
     letter-spacing: 3px;
     border-radius: 50px;
     transition: all 0.3s;
-    margin-left: 80%;
 }
 
 .btn-equipos {
@@ -139,6 +138,34 @@ h2 {
 }
 
 .btn-equipos:hover {
+    transform: translateY(-5px) scale(1.05);
+    color: #0a0a0a;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+}
+
+.salir-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 16px;
+    width: 100%;
+}
+
+.salir {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 50px;
+    transition: all 0.3s;
+    background: linear-gradient(145deg, #ffd700, #ffaa00);
+    color: #0a0a0a;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    margin-left: 90%;
+}
+
+.salir:hover {
     transform: translateY(-5px) scale(1.05);
     color: #0a0a0a;
     box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
